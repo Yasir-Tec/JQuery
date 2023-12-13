@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <script>
+            $().ready(()=>{
+
+                $("#id1").change(()=>
+                {
+                    let str = $("#id1").val()
+                    let uc = str.toUpperCase()
+                    $("p").html(`<b>${uc}</b>`)  
+            })
+        })
+        </script>
+    </head>
+    <body>
+        <div>
+        <input type="text" id="id1" />
+        <p></p>
+    </div>
+    </body>
+</html>
