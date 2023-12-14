@@ -1,0 +1,29 @@
+<html>
+    <head>
+       
+            <script src="./jquery-3.6.0.js"></script>
+            <script>
+                $().ready(()=>{
+                    console.log("ready")
+                    $(".cb").change(()=>{
+                        console.log("change")
+                        $(".cb").text("")
+                        $(".cb").each((i,ele)=>{
+                            console.log(i,ele,ele.value,ele.checked)
+                            if(ele.checked)
+                            {
+                                $("p").append(" "+ele.value)
+                            }
+                        })
+                    })
+                })
+                
+            </script>
+    </head>
+    <body>
+        Hi:<input type="checkbox" class="cb" value="hi"><br>
+        hello:<input type="checkbox" class="cb" value="hello"><br>
+        bye:<input type="checkbox" class="cb" value="bye"><br>
+        <p></p>
+    </body>
+</html>

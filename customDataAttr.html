@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <script>
+            $().ready(()=>{
+
+            $("#id1").click(()=>{
+
+
+                $("#id1").html("")
+                let m = $("#id1").data("msg")
+                let c = $("#id1").data("count")
+                for(let i=0;i<c;i++)
+                {
+                    $("#id1").append(m+"<br>")
+                }
+            })
+
+        })
+        </script>
+    </head>
+    <body>
+        <div data-count="8" data-msg="yasir" id="id1" style="width:400px;height:300px;border:3px solid "></div>
+    </body>
+</html>
